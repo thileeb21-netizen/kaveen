@@ -24,15 +24,145 @@
     <main>
         <section id="room-booking">
             <h2>Book a Room</h2>
-            <p>Room booking form will go here.</p>
+            <div class="room-list">
+                <div class="room-item">
+                    <h3>Standard Queen Room</h3>
+                    <p><strong>Type:</strong> Non-AC</p>
+                    <p><strong>Price:</strong> $100/night</p>
+                    <p><strong>Capacity:</strong> 2 Adults</p>
+                    <p><strong>Bed Type:</strong> 1 Queen Bed</p>
+                    <p><strong>Amenities:</strong> Wi-Fi, TV, Bathroom with shower</p>
+                    <p><strong>Availability:</strong> <span class="available">Available</span></p>
+                    <button>Book Now</button>
+                </div>
+                <div class="room-item">
+                    <h3>Deluxe King Room</h3>
+                    <p><strong>Type:</strong> AC</p>
+                    <p><strong>Price:</strong> $150/night</p>
+                    <p><strong>Capacity:</strong> 2 Adults, 1 Child</p>
+                    <p><strong>Bed Type:</strong> 1 King Bed</p>
+                    <p><strong>Amenities:</strong> Wi-Fi, TV, Mini-fridge, Bathtub</p>
+                    <p><strong>Availability:</strong> <span class="unavailable">Booked</span></p>
+                    <button disabled>Book Now</button>
+                </div>
+                <div class="room-item">
+                    <h3>Family Suite</h3>
+                    <p><strong>Type:</strong> AC</p>
+                    <p><strong>Price:</strong> $250/night</p>
+                    <p><strong>Capacity:</strong> 4 Adults, 2 Children</p>
+                    <p><strong>Bed Type:</strong> 2 Queen Beds, 1 Sofa Bed</p>
+                    <p><strong>Amenities:</strong> Wi-Fi, TV, Mini-fridge, Kitchenette, Bathtub</p>
+                    <p><strong>Availability:</strong> <span class="available">Available</span></p>
+                    <button>Book Now</button>
+                </div>
+            </div>
         </section>
         <section id="buffet-reservation">
-            <h2>Reserve a Buffet Table</h2>
-            <p>Buffet reservation form will go here.</p>
+            <h2>Reserve a Buffet Table & Pre-order Meals</h2>
+            <div class="buffet-options">
+                <div class="form-group">
+                    <label for="booking-type">Booking Type:</label>
+                    <select id="booking-type" name="booking-type">
+                        <option value="dine-in">Dine-in</option>
+                        <option value="takeaway">Takeaway</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="room-number">Link to Room (optional):</label>
+                    <input type="text" id="room-number" name="room-number" placeholder="Enter room number">
+                </div>
+            </div>
+
+            <div id="dine-in-options">
+                <h3>Select a Table</h3>
+                <div class="table-layout">
+                    <!-- Interactive table layout will go here -->
+                    <p>Placeholder for interactive table layout. Shows table availability and seating capacity.</p>
+                </div>
+            </div>
+
+            <h3>Today's Menu</h3>
+            <div class="menu">
+                <h4>Appetizers</h4>
+                <div class="menu-item">
+                    <input type="checkbox" id="item1" name="menu-items" value="item1">
+                    <label for="item1">Vegetable Spring Rolls (2 pcs)</label>
+                </div>
+                <div class="menu-item">
+                    <input type="checkbox" id="item2" name="menu-items" value="item2">
+                    <label for="item2">Chicken Satay (4 pcs)</label>
+                </div>
+
+                <h4>Main Courses</h4>
+                <div class="menu-item">
+                    <input type="checkbox" id="item3" name="menu-items" value="item3">
+                    <label for="item3">Grilled Salmon with Asparagus (Full portion)</label>
+                </div>
+                <div class="menu-item">
+                    <input type="checkbox" id="item4" name="menu-items" value="item4">
+                    <label for="item4">Paneer Butter Masala (Half portion)</label>
+                </div>
+
+                <h4>Desserts</h4>
+                <div class="menu-item">
+                    <input type="checkbox" id="item5" name="menu-items" value="item5">
+                    <label for="item5">Chocolate Lava Cake</label>
+                </div>
+            </div>
+
+            <h3>Add-ons</h3>
+            <div class="add-ons">
+                 <div class="menu-item">
+                    <input type="checkbox" id="addon1" name="add-ons" value="addon1">
+                    <label for="addon1">Dessert Counter Access</label>
+                </div>
+                 <div class="menu-item">
+                    <input type="checkbox" id="addon2" name="add-ons" value="addon2">
+                    <label for="addon2">Juice Bar Access</label>
+                </div>
+            </div>
+            <button>Place Order</button>
         </section>
         <section id="event-booking">
-            <h2>Schedule an Event</h2>
-            <p>Event booking form will go here.</p>
+            <h2>Schedule an Event in the Reception Hall</h2>
+            <div class="hall-list">
+                <div class="hall-item">
+                    <h3>The Grand Ballroom</h3>
+                    <p><strong>Capacity:</strong> 200-500 guests</p>
+                    <p><strong>Features:</strong> High ceilings, chandeliers, large dance floor, stage.</p>
+                    <p><strong>Availability:</strong> <span class="available">Available</span></p>
+                    <button>Select Hall</button>
+                </div>
+                <div class="hall-item">
+                    <h3>The Garden Terrace</h3>
+                    <p><strong>Capacity:</strong> 50-100 guests</p>
+                    <p><strong>Features:</strong> Outdoor seating, beautiful garden views, retractable roof.</p>
+                    <p><strong>Availability:</strong> <span class="unavailable">Booked for selected date</span></p>
+                    <button disabled>Select Hall</button>
+                </div>
+            </div>
+
+            <div class="event-customization">
+                <h3>Customize Your Event</h3>
+
+                <h4>Food & Catering</h4>
+                <p>Choose from our <a href="#food-packages">predefined packages</a> or build a custom menu. (Placeholder)</p>
+
+                <h4>Decorations</h4>
+                <p>Select a theme, lighting style, and add-ons like floral arrangements, balloon arches, and LED signage. (Placeholder)</p>
+
+                <h4>Seating Arrangement</h4>
+                <p>Use our drag-and-drop tool to create a seating layout (e.g., round tables, theater-style). (Placeholder)</p>
+
+                <h4>Additional Services</h4>
+                <p>Book a DJ, photographer, projector, security, valet parking, and more. (Placeholder)</p>
+            </div>
+
+            <div class="booking-summary">
+                <h3>Booking Summary</h3>
+                <p>Your selections, total price, and payment options will be displayed here. (Placeholder)</p>
+            </div>
+            <button>Request Booking</button>
         </section>
         <section id="booking-history">
             <h2>Booking History</h2>

@@ -89,3 +89,69 @@ footer {
     background: #333;
     color: #fff;
 }
+
+/* Guest Dashboard Modules */
+
+/* Room Booking */
+.room-list, .hall-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.room-item, .hall-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.room-item h3, .hall-item h3 {
+    margin-top: 0;
+}
+
+.room-item .available, .hall-item .available {
+    color: green;
+    font-weight: bold;
+}
+
+.room-item .unavailable, .hall-item .unavailable {
+    color: red;
+    font-weight: bold;
+}
+
+/* Buffet & Menu */
+.buffet-options {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.menu h4 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.menu-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Event Customization */
+.event-customization h4, .booking-summary h3 {
+    margin-top: 20px;
+}
+
+/* Form Styles Update */
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
