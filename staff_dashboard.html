@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard - Hotel Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Staff Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="dashboard">
+            <h2>Welcome, Staff Member!</h2>
+            <p>This is your dashboard. Role-specific content will be displayed here.</p>
+            <!-- Example for a receptionist -->
+            <div class="role-specific-content" id="receptionist-content">
+                <h3>Receptionist Panel</h3>
+                <ul>
+                    <li>Manage Check-ins</li>
+                    <li>View Room Statuses</li>
+                </ul>
+            </div>
+            <!-- Example for cleaning staff -->
+            <div class="role-specific-content" id="cleaning-staff-content" style="display:none;">
+                <h3>Cleaning Staff Panel</h3>
+                <ul>
+                    <li>View Room Cleaning Alerts</li>
+                    <li>Update Cleaning Progress</li>
+                </ul>
+            </div>
+             <!-- Example for buffet staff -->
+            <div class="role-specific-content" id="buffet-staff-content" style="display:none;">
+                <h3>Buffet Staff Panel</h3>
+                <ul>
+                    <li>Manage Buffet Reservations</li>
+                    <li>Update Menus</li>
+                </ul>
+            </div>
+        </section>
+        <section id="profile">
+            <h2>Your Profile</h2>
+            <p>Your profile details will be displayed here.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Hotel Management System</p>
+    </footer>
+</body>
+</html>
