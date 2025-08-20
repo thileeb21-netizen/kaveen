@@ -170,3 +170,75 @@ body {
     background-color: var(--color-accent);
     color: var(--color-dark-text);
 }
+
+/* Role Selector Enhancement */
+.role-selector-group {
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px; /* More space after role selection */
+}
+
+.role-selector-group label {
+    position: static; /* Override floating label behavior */
+    font-size: 14px;
+    color: #B0B3B8;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.role-selector-group select {
+    background-color: var(--color-primary); /* Contrasting background */
+    border: 1px solid var(--color-accent);
+}
+
+/* Guest Header Card */
+.guest-header-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--color-secondary);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 40px;
+    border: 1px solid #415A77;
+}
+
+.guest-header-card .profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-accent);
+}
+
+.guest-header-card .user-info h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.guest-header-card .user-info p {
+    margin: 0;
+    color: #B0B3B8;
+}
+
+.guest-header-card .loyalty-badge {
+    margin-left: auto;
+    background: linear-gradient(135deg, #8B0000, #FFD700); /* Maroon to Gold gradient */
+    color: white;
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.loyalty-badge .points {
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+}
+
+.loyalty-badge .label {
+    font-size: 12px;
+    text-transform: uppercase;
+}

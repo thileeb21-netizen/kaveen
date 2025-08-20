@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
     const [passwordShown, setPasswordShown] = useState(false);
+    const [role, setRole] = useState('guest');
+    const navigate = useNavigate();
 
     const togglePasswordVisibility = () => {
         setPasswordShown(!passwordShown);
+    };
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        // In a real app, you'd have authentication logic here.
+        // For now, we just navigate based on the selected role.
+        const path = `/${role}-dashboard`;
+        navigate(path);
     };
 
     return (
@@ -15,7 +25,15 @@ const LoginPage = () => {
                     <h2>Welcome to Elite Hotel</h2>
                     <p>Sign in to continue</p>
                 </div>
-                <form>
+                <form onSubmit={handleLogin}>
+                    <div className="input-group role-selector-group">
+                        <label htmlFor="role">Select Your Role</label>
+                        <select id="role" name="role" value={role} onChange={(e) => setRole(e.target.value)}>
+                            <option value="guest">Guest</option>
+                            <option value="staff">Staff</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
                     <div className="input-group">
                         <input type="text" id="username" name="username" required placeholder=" " />
                         <label htmlFor="username">Username</label>
@@ -33,18 +51,11 @@ const LoginPage = () => {
                             {passwordShown ? "Hide" : "Show"}
                         </button>
                     </div>
-                    <div className="input-group">
-                        <label htmlFor="role" className="sr-only">Role</label>
-                        <select id="role" name="role" defaultValue="guest">
-                            <option value="guest">Guest</option>
-                            <option value="staff">Staff</option>
-                            <option value="admin">Admin</option>
-                        </select>
-                    </div>
+
                     <div className="form-actions">
                         <Link to="/forgot-password" className="forgot-password">Forgot Password?</Link>
                     </div>
-                    <Link to="/guest-dashboard" className="btn btn-primary" style={{ textDecoration: 'none', display: 'block' }}>Login</Link>
+                    <button type="submit" className="btn btn-primary">Login</button>
                     <Link to="/register" className="btn btn-secondary" style={{ textDecoration: 'none', display: 'block', marginTop: '10px' }}>Register</Link>
                 </form>
             </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import RoomCard from './RoomCard';
+import GuestHeader from './GuestHeader';
 
 // Static data for now, assuming images will be in the public/assets directory
 const roomsData = [
@@ -12,9 +13,11 @@ const RoomBooking = () => {
     const [price, setPrice] = useState(500);
 
     return (
-        <section id="room-booking">
-            <h2>Find Your Perfect Room</h2>
-            <div className="filter-bar">
+        <>
+            <GuestHeader />
+            <section id="room-booking">
+                <h2>Find Your Perfect Room</h2>
+                <div className="filter-bar">
                 <div className="filter-group">
                     <label htmlFor="room-type">Room Type</label>
                     <select id="room-type" name="room-type">
