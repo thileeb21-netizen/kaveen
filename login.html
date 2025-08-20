@@ -6,7 +6,7 @@
     <title>Login - Elite Hotel Management System</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-centered">
     <div class="login-container">
         <div class="login-box">
             <div class="login-header">
@@ -20,9 +20,10 @@
                     <input type="text" id="username" name="username" required placeholder=" ">
                     <label for="username">Username</label>
                 </div>
-                <div class="input-group">
+                <div class="input-group password-input-group">
                     <input type="password" id="password" name="password" required placeholder=" ">
                     <label for="password">Password</label>
+                    <button type="button" class="password-toggle">Show</button>
                 </div>
                 <div class="input-group">
                      <label for="role" class="sr-only">Role</label>
@@ -40,5 +41,6 @@
             </form>
         </div>
     </div>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
