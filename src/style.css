@@ -1,0 +1,172 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* CSS Variables for Dark Theme */
+:root {
+    --font-primary: 'Poppins', sans-serif;
+    --color-primary: #0D1B2A; /* Rich Dark Blue */
+    --color-secondary: #1B263B; /* Slightly Lighter Dark Blue */
+    --color-accent: #FFC107; /* Gold */
+    --color-light: #E0E1DD; /* Light Grey/Off-white for text */
+    --color-dark-text: #0D1B2A; /* For light backgrounds if any */
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --border-radius: 8px;
+}
+
+/* Base Styles */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    margin: 0;
+}
+
+.page-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Login/Registration Page Styles */
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.login-box {
+    background: var(--color-secondary);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    border: 1px solid #415A77;
+}
+
+.login-header h2 {
+    margin: 0 0 10px;
+    font-weight: 600;
+}
+
+.login-header p {
+    margin: 0 0 30px;
+    color: #B0B3B8;
+}
+
+/* Floating Label Form Styles for Dark Theme */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #415A77;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    background-color: transparent;
+    color: var(--color-light);
+    box-sizing: border-box;
+}
+
+.input-group label {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    color: #B0B3B8;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: var(--color-accent);
+    background: var(--color-secondary);
+    padding: 0 5px;
+}
+
+.input-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23E0E1DD' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    cursor: pointer;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Form Actions, Footer & Buttons */
+.form-actions {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot-password, .form-footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 14px;
+}
+.form-footer {
+    margin-top: 20px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-dark-text);
+    margin-bottom: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #ffca2c;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent);
+    color: var(--color-dark-text);
+}
