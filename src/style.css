@@ -171,6 +171,231 @@ body {
     color: var(--color-dark-text);
 }
 
+/* Global Header */
+.main-header {
+    background-color: var(--color-secondary);
+    box-shadow: var(--shadow);
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #415A77;
+    height: 70px;
+}
+
+.main-header .logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    height: 100%;
+}
+
+.main-nav a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    color: var(--color-light);
+    font-weight: 500;
+    transition: color 0.2s, border-bottom 0.2s;
+    border-bottom: 3px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--color-accent);
+    border-bottom: 3px solid var(--color-accent);
+}
+
+/* Main Content Area */
+.main-content {
+    padding: 40px;
+}
+
+/* Base Card Style (for dashboards) */
+.card {
+    background: var(--color-secondary);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--shadow);
+    border: 1px solid #415A77;
+}
+
+/* Guest Header Card */
+.guest-header-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.guest-header-card .profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-accent);
+}
+
+.guest-header-card .user-info h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.guest-header-card .user-info p {
+    margin: 0;
+    color: #B0B3B8;
+}
+
+.guest-header-card .loyalty-badge {
+    margin-left: auto;
+    background: linear-gradient(135deg, #8B0000, #FFD700);
+    color: white;
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.loyalty-badge .points {
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+}
+
+.loyalty-badge .label {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* Filter Bar */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 30px;
+    background-color: var(--color-secondary);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    border: 1px solid #415A77;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #B0B3B8;
+}
+
+.filter-group select, .filter-group input {
+    min-width: 180px;
+}
+
+.filter-bar .btn {
+    width: auto;
+    padding: 12px 30px;
+}
+
+/* Room Grid & Cards */
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.room-card {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.room-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.room-card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-card-content h3 {
+    margin: 0 0 10px;
+}
+
+.room-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin: 0 0 15px;
+}
+
+.room-amenities {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.room-amenities li {
+    background-color: #0D1B2A;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.room-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #415A77;
+}
+
+.availability {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.availability.available {
+    color: #28a745;
+}
+
+.availability.unavailable {
+    color: #dc3545;
+}
+
+.room-card .btn {
+    width: auto;
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
 /* Role Selector Enhancement */
 .role-selector-group {
     text-align: left;

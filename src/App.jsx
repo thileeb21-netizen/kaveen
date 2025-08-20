@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 // Layouts
-import CenteredLayout from './components/layout/CenteredLayout'; // Assuming we move this
+import CenteredLayout from './components/layout/CenteredLayout';
 import DashboardLayout from './components/layout/DashboardLayout';
 
 // Pages
